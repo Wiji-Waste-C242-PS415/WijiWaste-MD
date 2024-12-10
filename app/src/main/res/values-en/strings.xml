@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">My Story App</string>
+    <string name="signup">SignUp</string>
+    <string name="login">Login</string>
+    <string name="message_welcome_page">Explore the Interesting Story Here</string>
+    <string name="title_welcome_page">Welcome to the Story Rise Academy Application</string>
+    <string name="title_signup_page">Register first</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="message_login_page">Enter your email and password</string>
+    <string name="title_login_page">log in to Explore</string>
+    <string name="name">Name</string>
+    <string name="message_main_page">Enjoy Exploring the Story</string>
+    <string name="greeting">Halo %1$s,</string>
+    <string name="logout">Logout</string>
+    <string name="error">Error</string>
+    <string name="desc_menu1">This is the description</string>
+    <string name="description">Write Your Description</string>
+    <string name="languange">Languange</string>
+    <string name="tmbl_setting">language setting button</string>
+    <string name="tmbl_logout">Exit button</string>
+    <string name="camera">Camera</string>
+    <string name="camera_x">CameraX</string>
+    <string name="gallery">Gallery</string>
+    <string name="upload">Upload</string>
+    <string name="empty_image_warning">Insert Image First</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_info">Info</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_history">History</string>
+    <string name="title_qr">Scan</string>
+</resources>

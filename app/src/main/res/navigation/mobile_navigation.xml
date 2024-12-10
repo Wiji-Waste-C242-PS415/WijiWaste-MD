@@ -7,25 +7,31 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.wijiwaste.ui.home.HomeFragment"
+        android:name="com.dicoding.capstone.mystoryapp.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.wijiwaste.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_info"
+        android:name="com.dicoding.capstone.mystoryapp.info.InfoFragment"
         android:label="@string/title_info"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_info" />
 
     <fragment
-        android:id="@+id/navigation_home2"
-        android:name="com.example.wijiwaste.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_qr"
+        android:name="com.dicoding.capstone.mystoryapp.qr.QrFragment"
+        android:label="@string/title_qr"
+        tools:layout="@layout/fragment_info" />
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.dicoding.capstone.mystoryapp.history.HistoryFragment"
         android:label="@string/title_history"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_history" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.wijiwaste.ui.notifications.NotificationsFragment"
+        android:id="@+id/navigation_profile"
+        android:name="com.dicoding.capstone.mystoryapp.profile.ProfileFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_profile" />
 </navigation>

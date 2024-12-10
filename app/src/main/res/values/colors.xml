@@ -1,28 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="yellow">#FFBB02</color> //primary_color_nanti_diganti_namenya
-    <color name="yellow_200">#F9DE93</color>
-
-
-    //green
-    <color name="green_200">#BEFFC1</color>
-    <color name="green_500">#3FA344</color>
-
-
-    /red
-    <color name="red_700">#FF0A0E</color>
-    <color name="red_200">#FFBBBC</color>
-
-
-    /blue
-    <color name="blue_300">#B3E5FC</color>
-    <color name="blue_100">#E0F7FA</color>
-
-
-    /grey
-    <color name="grey_100">#F5F5F5</color>
-
-
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="navy">#2D3D4F</color>
+    <color name="aqua">#FF9800</color>
+
+    <color name="purple_200">#FFBB02</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#6A5252</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="yellow">#FF9800</color>
+
+
 </resources>
