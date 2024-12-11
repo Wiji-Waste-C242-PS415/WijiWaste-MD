@@ -12,13 +12,19 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_info"
-        android:name="com.example.wijiwaste.ui.info.InfoFragment"
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.wijiwaste.ui.dashboard.DashboardFragment"
         android:label="@string/title_info"
-        tools:layout="@layout/fragment_info" />
+        tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_camera"
+        android:name="com.example.wijiwaste.ui.Camera.CameraFragment"
+        android:label="@string/title_camera"
+        tools:layout="@layout/fragment_camera" />
+
+    <fragment
+        android:id="@+id/navigation_home2"
         android:name="com.example.wijiwaste.ui.dashboard.DashboardFragment"
         android:label="@string/title_history"
         tools:layout="@layout/fragment_dashboard" />

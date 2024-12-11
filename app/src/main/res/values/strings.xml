@@ -2,10 +2,20 @@
     <string name="app_name">WijiWaste</string>
     <string name="title_home">Home</string>
     <string name="title_info">Info</string>
+    <string name="title_camera">Camera</string>
     <string name="title_history">History</string>
     <string name="title_profile">Profile</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="image_from_story">Image from story</string>
+    <string name="story_description">Story\'s Description</string>
+    <string name="uploadWarning">Upload the image first</string>
 
-    <string name="redeem">redeem points</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="package_name">com.example.wijiwaste</string>
+    <string name="trash">Hand Over The Trash</string>
+
+    //ascleipius
+    <string name="result">Hasil Analisis</string>
+    <string name="image_classifier_failed">Image classifier failed to initialize. See error logs for details</string>
+    <string name="analysis_error">Analysis Error!</string>
 </resources>

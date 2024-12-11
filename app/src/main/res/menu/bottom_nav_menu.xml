@@ -7,8 +7,13 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_info"
+        android:id="@+id/navigation_home2"
         android:icon="@drawable/ic_info"
+        android:title="@string/title_info" />
+
+    <item
+        android:id="@+id/navigation_camera"
+        android:icon="@drawable/baseline_camera_24"
         android:title="@string/title_info" />
 
     <item
