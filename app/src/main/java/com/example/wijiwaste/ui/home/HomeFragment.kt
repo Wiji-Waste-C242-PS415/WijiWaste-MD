@@ -1,20 +1,27 @@
 package com.example.wijiwaste.ui.home
 
+import NewsAdapter
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.wijiwaste.data.NewsItem
+import com.example.wijiwaste.data.response.ResponseNews
+import com.example.wijiwaste.data.retrofit.ApiConfig
 import com.example.wijiwaste.databinding.FragmentHomeBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -28,12 +35,38 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+        setupRecyclerView()
+        fetchNewsData()
+
         return root
     }
+
+    private fun setupRecyclerView() {
+        binding.rvNews.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            setHasFixedSize(true)
+        }
+    }
+
+    private fun fetchNewsData() {
+        ApiConfig.getApiNews().getNews().enqueue(object : Callback<ResponseNews> {
+            override fun onResponse(call: Call<ResponseNews>, response: Response<ResponseNews>) {
+                if (response.isSuccessful) {
+                    val newsList = response.body()?.posts ?: emptyList()
+                    val adapter = NewsAdapter(newsList)
+                    binding.rvNews.adapter = adapter
+                } else {
+                    Toast.makeText(requireContext(), "Failed to load data", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<ResponseNews>, t: Throwable) {
+                Log.e("API_ERROR", "Error: ${t.message}")
+                Toast.makeText(requireContext(), "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -1,5 +1,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -29,30 +30,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.imageview.ShapeableImageView
+    <ImageView
         android:id="@+id/profileImage"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/ic_home_black_24dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp"
+        android:background="@drawable/circle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
         android:layout_width="match_parent"
         android:layout_height="174dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/backgroundYellow"
-        app:cardCornerRadius="12dp"
-        app:strokeWidth="2dp"
-        app:strokeColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
         app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundYellow"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backgroundYellow">
+        app:layout_constraintTop_toBottomOf="@+id/backgroundYellow"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp">
+
 
         <TextView
             android:id="@+id/pointText"
@@ -67,6 +73,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/pointValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="1000"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pointText" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -74,7 +92,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Add margin here to create space between TextView and buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,10 +104,12 @@
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/yellow"
+                    android:text="@string/redeem"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp"
                     app:cornerRadius="18dp"
-                    android:text="Yellow"
-                    android:textColor="@android:color/white"
-                    app:strokeColor="@color/white" /> <!-- Added stroke to button -->
+                    app:icon="@drawable/ic_dollar"
+                    app:iconPadding="-6dp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_blacl"
@@ -99,14 +118,42 @@
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/black"
-                    app:cornerRadius="18dp"
-                    app:strokeWidth="1dp"
                     android:strokeColor="@android:color/white"
-                    android:text="Yellow"
+                    android:text="@string/title_history"
                     android:textColor="@android:color/white"
-                    app:strokeColor="@color/white" />  <!-- Added stroke to button -->
-
+                    android:textSize="10sp"
+                    app:cornerRadius="18dp"
+                    app:icon="@drawable/ic_arrow_up"
+                    app:iconPadding="-6dp"
+                    app:iconTint="@color/white"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="1dp" />
             </LinearLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="300dp"
+        android:text="NEWS"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_news"
+        android:layout_width="409dp"
+        android:layout_height="442dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
