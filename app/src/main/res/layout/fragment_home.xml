@@ -74,7 +74,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Add margin here to create space between TextView and buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -88,9 +87,11 @@
                     android:layout_weight="1"
                     android:backgroundTint="@color/yellow"
                     app:cornerRadius="18dp"
-                    android:text="Yellow"
-                    android:textColor="@android:color/white"
-                    app:strokeColor="@color/white" /> <!-- Added stroke to button -->
+                    app:icon="@drawable/ic_dollar"
+                    android:textSize="10sp"
+                    app:iconPadding="-6dp"
+                    android:text="@string/redeem"
+                    android:textColor="@android:color/black" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_blacl"
@@ -101,11 +102,14 @@
                     android:backgroundTint="@color/black"
                     app:cornerRadius="18dp"
                     app:strokeWidth="1dp"
+                    app:icon="@drawable/ic_arrow_up"
+                    android:textSize="10sp"
+                    app:iconPadding="-6dp"
+                    app:iconTint="@color/white"
                     android:strokeColor="@android:color/white"
-                    android:text="Yellow"
+                    android:text="@string/title_history"
                     android:textColor="@android:color/white"
-                    app:strokeColor="@color/white" />  <!-- Added stroke to button -->
-
+                    app:strokeColor="@color/white" />
             </LinearLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
