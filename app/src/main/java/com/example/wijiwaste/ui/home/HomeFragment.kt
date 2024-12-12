@@ -29,9 +29,6 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
@@ -49,12 +46,13 @@ class HomeFragment : Fragment() {
     }
 
     private fun fetchNewsData() {
+        val rvNews = _binding?.rvNews
         ApiConfig.getApiNews().getNews().enqueue(object : Callback<ResponseNews> {
             override fun onResponse(call: Call<ResponseNews>, response: Response<ResponseNews>) {
                 if (response.isSuccessful) {
                     val newsList = response.body()?.posts ?: emptyList()
                     val adapter = NewsAdapter(newsList)
-                    binding.rvNews.adapter = adapter
+                    rvNews?.adapter = adapter
                 } else {
                     Toast.makeText(requireContext(), "Failed to load data", Toast.LENGTH_SHORT).show()
                 }
