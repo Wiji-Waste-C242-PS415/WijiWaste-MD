@@ -5,7 +5,7 @@
 
     <color name="navy">#2D3D4F</color>
     //green
-    <color name="green_200">#BEFFC1</color>
+    <color name="light_green">#BEFFC1</color>
     <color name="green_500">#3FA344</color>
 
 
@@ -15,7 +15,7 @@
 
 
     /blue
-    <color name="blue_300">#B3E5FC</color>
+    <color name="light_blue">#B3E5FC</color>
     <color name="blue_100">#E0F7FA</color>
 
 

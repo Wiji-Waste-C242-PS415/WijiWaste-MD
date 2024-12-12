@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.WijiWaste" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.WijiWaste" parent="Theme.MaterialComponents.Light">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/yellow</item>
         <item name="colorPrimaryVariant">@color/yellow_200</item>
@@ -12,4 +12,5 @@
         <item name="android:statusBarColor">@color/yellow</item>
         <!-- Customize your theme here. -->
     </style>
+
 </resources>
