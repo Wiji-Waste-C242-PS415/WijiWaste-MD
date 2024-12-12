@@ -21,15 +21,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.hide()
-         // Mengatur Toolbar sebagai ActionBar
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar) // Mengatur Toolbar sebagai ActionBar
         supportActionBar?.setDisplayShowTitleEnabled(false)
         val navView: BottomNavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
 
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications, R.id.navigation_info
+                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
             )
         )
        setupActionBarWithNavController(navController, appBarConfiguration)
