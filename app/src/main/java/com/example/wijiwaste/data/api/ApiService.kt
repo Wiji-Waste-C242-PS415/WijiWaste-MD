@@ -1,11 +1,13 @@
 package com.example.wijiwaste.data.api
 
+import com.example.wijiwaste.data.response.ResponseNews
 import com.example.wijiwaste.response.LoginResponse
 import com.example.wijiwaste.response.RegisterResponse
 import com.example.wijiwaste.response.StoryResponse
 import com.example.wijiwaste.response.UploadResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -15,6 +17,8 @@ import retrofit2.http.Part
 
 
 interface ApiService{
+    @GET("category/indonesia")
+    fun getNews(): Call<ResponseNews>
     @FormUrlEncoded
     @POST("register")
     suspend fun register(

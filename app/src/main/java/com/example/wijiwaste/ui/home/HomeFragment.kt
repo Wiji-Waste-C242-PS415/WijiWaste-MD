@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.wijiwaste.R
 import com.example.wijiwaste.data.NewsItem
+import com.example.wijiwaste.data.api.ApiConfig
 import com.example.wijiwaste.data.response.ResponseNews
 import com.example.wijiwaste.data.retrofit.ApiConfig
 import com.example.wijiwaste.databinding.FragmentHomeBinding
