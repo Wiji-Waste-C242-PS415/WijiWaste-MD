@@ -10,13 +10,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
-import com.example.wijiwaste.R
 import com.example.wijiwaste.data.NewsItem
 import com.example.wijiwaste.data.api.ApiConfig
 import com.example.wijiwaste.data.response.ResponseNews
-import com.example.wijiwaste.data.retrofit.ApiConfig
 import com.example.wijiwaste.databinding.FragmentHomeBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -38,17 +34,8 @@ class HomeFragment : Fragment() {
 
         setupRecyclerView()
         fetchNewsData()
-        setupProfileImage()
 
         return root
-    }
-
-    private fun setupProfileImage() {
-        Glide.with(this)
-            .load(R.drawable.profile)
-            .apply(RequestOptions.circleCropTransform())
-            .apply(RequestOptions.placeholderOf(R.drawable.profile))
-            .into(binding.profileImage)
     }
 
     private fun setupRecyclerView() {

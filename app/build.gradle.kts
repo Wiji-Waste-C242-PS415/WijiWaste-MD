@@ -46,6 +46,7 @@ dependencies {
 
     implementation (libs.material.v190)
 
+    implementation(libs.glide)
     implementation(libs.androidx.cardview)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
