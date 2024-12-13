@@ -39,7 +39,6 @@
         android:src="@drawable/ic_home_black_24dp"
         app:strokeColor="@color/black"
         app:strokeWidth="2dp"
-        android:background="@drawable/circle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -108,7 +107,6 @@
                     android:textColor="@android:color/black"
                     android:textSize="10sp"
                     app:cornerRadius="18dp"
-                    app:icon="@drawable/ic_dollar"
                     app:iconPadding="-6dp" />
 
                 <com.google.android.material.button.MaterialButton
@@ -123,7 +121,6 @@
                     android:textColor="@android:color/white"
                     android:textSize="10sp"
                     app:cornerRadius="18dp"
-                    app:icon="@drawable/ic_arrow_up"
                     app:iconPadding="-6dp"
                     app:iconTint="@color/white"
                     app:strokeColor="@color/white"
